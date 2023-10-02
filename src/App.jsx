@@ -81,7 +81,7 @@ function App() {
    return (
       <div className="App">
          <Routes>
-            <Route index element={<Layout projectsList={projectsList} />} />
+            <Route path="/" element={<Layout projectsList={projectsList} />} />
             {projectsList.map((project, index) => (
                <Route
                   key={index}
