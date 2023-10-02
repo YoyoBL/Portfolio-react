@@ -1,0 +1,11 @@
+.img-thumbnail {
+   background-color: transparent;
+   border: none;
+   min-width: 80px;
+}
+
+@media (max-width: 576px) {
+   .technologies-used {
+      overflow: scroll;
+   }
+}
