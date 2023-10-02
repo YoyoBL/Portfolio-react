@@ -25,7 +25,7 @@ const Technologies = ({
             {logos.map((logo, index) => (
                <img
                   key={index}
-                  src={`/images/Icons/${logo}-svgrepo-com.svg`}
+                  src={`./images/Icons/${logo}-svgrepo-com.svg`}
                   alt="Html logo"
                   className="img-fluid"
                   style={{ height: height }}
