@@ -14,6 +14,11 @@ const Technologies = ({
       "github",
    ],
 }) => {
+   if (window.matchMedia("(max-width: 768px)") && carousel) {
+      height = height.replace("px", "");
+      height = Number(height) / 2;
+      height = [String(height), "px"].join("");
+   }
    const generateLogos = (key) => {
       return (
          <div
@@ -27,7 +32,6 @@ const Technologies = ({
                   key={index}
                   src={`./images/Icons/${logo}-svgrepo-com.svg`}
                   alt="Html logo"
-                  className="img-fluid"
                   style={{ height: height }}
                />
             ))}
