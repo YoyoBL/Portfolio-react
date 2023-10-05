@@ -12,9 +12,12 @@ const Technologies = ({
       "typescript",
       "vscode",
       "github",
+      "react",
+      "react-router",
+      "formik",
    ],
 }) => {
-   if (window.matchMedia("(max-width: 768px)") && carousel) {
+   if (window.matchMedia("(max-width: 768px)").matches && carousel) {
       height = height.replace("px", "");
       height = Number(height) / 2;
       height = [String(height), "px"].join("");

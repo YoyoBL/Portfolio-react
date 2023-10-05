@@ -7,7 +7,7 @@ import Contact from "./contact";
 const Layout = ({ projectsList }) => {
    return (
       <>
-         <header className="sticky-top">
+         <header className="fixed-top">
             <NavBar />
          </header>
          <main>

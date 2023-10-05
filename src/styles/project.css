@@ -1,0 +1,42 @@
+@keyframes light-move {
+   0% {
+      background-position: 0% 65%;
+      box-shadow: 22px 20px 40px -25px rgba(120, 193, 245, 0.75);
+   }
+   50% {
+      background-position: 100% 36%;
+      box-shadow: -22px -25px 40px -25px #b269c0;
+   }
+   100% {
+      background-position: 0% 65%;
+      box-shadow: 22px 20px 40px -25px rgba(120, 193, 245, 0.75);
+   }
+}
+
+.card {
+   background-color: #212529;
+   border: none;
+}
+
+.card-body {
+   color: white;
+}
+
+.frame {
+   padding: 8px;
+   border-radius: 5px;
+   background: linear-gradient(90deg, #c95fdf, #61b4f0);
+   background-size: 150% 150%;
+
+   animation: light-move 7s ease infinite;
+}
+
+.hover {
+   border-radius: 5px;
+
+   transition: all 0.2s ease-out;
+}
+
+.hover:hover {
+   box-shadow: 0 0 30px -8px rgb(6, 238, 255);
+}

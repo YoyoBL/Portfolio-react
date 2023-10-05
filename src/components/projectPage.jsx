@@ -4,7 +4,7 @@ import Technologies from "./technologies";
 
 const ProjectPage = ({ project }) => {
    return (
-      <>
+      <div className="d-flex flex-column" style={{ height: "100vh" }}>
          <header className="sticky-top">
             <nav
                className="navbar border-bottom border-bottom-dark bg-black bg-opacity-25"
@@ -17,8 +17,8 @@ const ProjectPage = ({ project }) => {
                </div>
             </nav>
          </header>
-         <main>
-            <div className="container-fluid d-flex flex-column min-vh-100">
+         <main className="flex-fill">
+            <div className="container-fluid d-flex flex-column h-100">
                <div className="row flex-fill text-center text-white center-all bg-black bg-opacity-25  ">
                   <h1>{project.title}</h1>
                   <p>{project.description}</p>
@@ -56,17 +56,19 @@ const ProjectPage = ({ project }) => {
                   />
                </div>
                <div className="row flex-fill">
-                  <div className="col-11 col-md-7 m-auto frames">
-                     <img
-                        src={`./images/Sites_thumbnails/${project.title}.png`}
-                        alt="project screenshot"
-                        className="img-fluid rounded-5"
-                     />
+                  <div className="col-11 col-md-8 m-auto ">
+                     <div className="frames ">
+                        <img
+                           src={`./images/Sites_thumbnails/${project.title}.png`}
+                           alt="project screenshot"
+                           className="img-fluid rounded-5"
+                        />
+                     </div>
                   </div>
                </div>
             </div>
          </main>
-      </>
+      </div>
    );
 };
 

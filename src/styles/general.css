@@ -56,14 +56,3 @@
    border-bottom: 1px solid #629fca;
    box-shadow: 0px 0px 5px 0.5px #629fca inset, -5px 0px 5px 0.5px #629fca;
 }
-
-/* .line-frames::after {
-   content: "";
-   height: 100%;
-   width: 100%;
-   position: absolute;
-   top: 5px;
-   left: 5px;
-   border-bottom: solid #629fca 2px;
-   box-shadow: 0px 1px 50px -21px #629fca inset, 0px 1px 50px -21px #629fca;
-} */

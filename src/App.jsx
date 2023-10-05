@@ -15,6 +15,13 @@ const projectsList = [
             <br />
          </>
       ),
+      technologies: [
+         "html-5",
+         "css-3",
+         "bootstrap",
+         "javascript",
+         "typescript",
+      ],
    },
    {
       title: "Trivia",
@@ -26,6 +33,7 @@ const projectsList = [
             facts!
          </>
       ),
+      technologies: [],
    },
    {
       title: "Todo-Lists",
@@ -38,6 +46,7 @@ const projectsList = [
             better organization and efficiency. <br />
          </>
       ),
+      technologies: [],
    },
    {
       title: "Cards Memory Game",
@@ -49,6 +58,7 @@ const projectsList = [
             you can increase the difficulty level and test your skills! <br />
          </>
       ),
+      technologies: [],
    },
    {
       title: "Snake Game",
@@ -62,6 +72,7 @@ const projectsList = [
             delight. <br />
          </>
       ),
+      technologies: [],
    },
    {
       title: "Full-Stack Course Summary",
@@ -74,6 +85,7 @@ const projectsList = [
             covers every essential aspect in a concise format <br />
          </>
       ),
+      technologies: [],
    },
 ];
 
