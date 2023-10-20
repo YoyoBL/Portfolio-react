@@ -4,7 +4,10 @@ import Technologies from "./technologies";
 
 const ProjectPage = ({ project }) => {
    return (
-      <div className="d-flex flex-column" style={{ height: "100vh" }}>
+      <div
+         className="d-flex flex-column overflow-hidden"
+         style={{ minHeight: "100vh" }}
+      >
          <header className="sticky-top">
             <nav
                className="navbar border-bottom border-bottom-dark bg-black bg-opacity-25"
@@ -17,54 +20,52 @@ const ProjectPage = ({ project }) => {
                </div>
             </nav>
          </header>
-         <main className="flex-fill">
-            <div className="container-fluid d-flex flex-column h-100">
-               <div className="row flex-fill text-center text-white center-all bg-black bg-opacity-25  ">
-                  <h1>{project.title}</h1>
-                  <p>{project.description}</p>
-                  <div className="d-flex flex-nowrap justify-content-center align-items-stretch gap-2">
-                     <Link
-                        to={`https://yoyobl.github.io/${project.linkAddress}`}
-                        className="btn btn-outline-light "
-                        target="_blank"
-                     >
-                        Go to project
-                     </Link>
-                     <Link
-                        to={`https://github.com/YoyoBL/${project.linkAddress}/archive/refs/heads/master.zip`}
-                        className="btn btn-outline-light "
-                     >
-                        Download project
-                     </Link>
-                     <Link
-                        to={`https://github.com/YoyoBL/${project.linkAddress}`}
-                        className="btn btn-outline-light"
-                        target="_blank"
-                     >
-                        Github
-                     </Link>
-                  </div>
+         <main className="flex-fill d-flex flex-column">
+            <div className="row text-center text-white center-all bg-black bg-opacity-25">
+               <h1>{project.title}</h1>
+               <p>{project.description}</p>
+               <div className="d-flex flex-nowrap justify-content-center align-items-stretch gap-2">
+                  <Link
+                     to={`https://yoyobl.github.io/${project.linkAddress}`}
+                     className="btn btn-outline-light "
+                     target="_blank"
+                  >
+                     Go to project
+                  </Link>
+                  <Link
+                     to={`https://github.com/YoyoBL/${project.linkAddress}/archive/refs/heads/master.zip`}
+                     className="btn btn-outline-light "
+                  >
+                     Download project
+                  </Link>
+                  <Link
+                     to={`https://github.com/YoyoBL/${project.linkAddress}`}
+                     className="btn btn-outline-light"
+                     target="_blank"
+                  >
+                     Github
+                  </Link>
                </div>
-               <div
-                  className="row line-frames shadow-lg overflow-hidden"
-                  style={{ paddingBlock: "20px" }}
-               >
-                  <Technologies
-                     height={"30px"}
-                     carousel={false}
-                     Technologies={["html-5", "css-3", "sass", "bootstrap"]}
+            </div>
+            <div
+               className="row line-frames shadow-lg overflow-hidden"
+               style={{ paddingBlock: "20px" }}
+            >
+               <Technologies
+                  height={"30px"}
+                  carousel={false}
+                  Technologies={["html-5", "css-3", "sass", "bootstrap"]}
+               />
+            </div>
+
+            <div className="flex-fill center-all p-3">
+               <div className="frames">
+                  <img
+                     src={`./images/Sites_thumbnails/${project.title}.png`}
+                     alt="project screenshot"
+                     className="img-fluid rounded-5"
+                     style={{ maxHeight: "500px" }}
                   />
-               </div>
-               <div className="row flex-fill">
-                  <div className="col-11 col-md-8 m-auto ">
-                     <div className="frames ">
-                        <img
-                           src={`./images/Sites_thumbnails/${project.title}.png`}
-                           alt="project screenshot"
-                           className="img-fluid rounded-5"
-                        />
-                     </div>
-                  </div>
                </div>
             </div>
          </main>
