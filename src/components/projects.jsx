@@ -12,7 +12,11 @@ const Projects = ({ projectsList = {} }) => {
             </div>
             <div className="row g-5 px-5 ">
                {projectsList.map((project, index) => (
-                  <Project key={index} project={project} />
+                  <Project
+                     key={index}
+                     project={project}
+                     featured={project?.featured}
+                  />
                ))}
             </div>
          </div>

@@ -18,9 +18,6 @@
 }
 
 .slide {
+   display: inline-flex;
    animation: 45s slide infinite linear;
-}
-
-.logos-slide img {
-   margin-inline: 14px;
 }

@@ -23,14 +23,14 @@ const ProjectPage = ({ project }) => {
          <main className="flex-fill d-flex flex-column">
             <div className="row text-center text-white center-all bg-black bg-opacity-25">
                <h1>{project.title}</h1>
-               <p>{project.description}</p>
+               <p>{project.details}</p>
                <div className="d-flex flex-nowrap justify-content-center align-items-stretch gap-2">
                   <Link
                      to={`https://yoyobl.github.io/${project.linkAddress}`}
                      className="btn btn-outline-light "
                      target="_blank"
                   >
-                     Go to project
+                     Visit project
                   </Link>
                   <Link
                      to={`https://github.com/YoyoBL/${project.linkAddress}/archive/refs/heads/master.zip`}
@@ -54,7 +54,7 @@ const ProjectPage = ({ project }) => {
                <Technologies
                   height={"30px"}
                   carousel={false}
-                  Technologies={["html-5", "css-3", "sass", "bootstrap"]}
+                  technologies={project.technologies}
                />
             </div>
 
