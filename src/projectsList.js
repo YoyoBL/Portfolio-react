@@ -1,5 +1,41 @@
 export const projectsList = [
    {
+      title: "Atsmai",
+      linkAddress: "https://atsmai.onrender.com/en/welcome",
+      githubRepository: "Atsmai",
+      description: (
+         <>
+            Crafted with the new NextJS 14 framework, Manage you're incomes and
+            expenses!
+         </>
+      ),
+      details: (
+         <>
+            I discovered Next.js and its awesome mix of backend and frontend
+            features, perfect for a full stack developer like me. <br />
+            So, I took on the challenge of learning it from scratch. The result?{" "}
+            <br />
+            Atsmai – a user-friendly web app for tracking incomes and expenses.
+            <br />
+            <br />
+            Atsmai is all about simplicity and ease of use. Give it a try by
+            signing up and see for yourself, Or clone from github and easily
+            seed initial data to get quickly started!
+         </>
+      ),
+      technologies: [
+         "nextjs",
+         "tailwind",
+         "html-5",
+         "css-3",
+         "javascript",
+         "react",
+         "formik",
+         "github",
+      ],
+      featured: true,
+   },
+   {
       title: "BizCard",
       linkAddress: "BizCard",
       description: <>Create and manage your very own digital business cards!</>,
@@ -24,7 +60,7 @@ export const projectsList = [
          "formik",
          "github",
       ],
-      featured: true,
+      featured: false,
    },
    {
       title: "BizCard Backend",
@@ -53,27 +89,9 @@ export const projectsList = [
          "jsonwebtoken",
          "github",
       ],
-      featured: true,
+      featured: false,
    },
-   {
-      title: "Expenses-Tracker",
-      linkAddress: "Expenses_Tracker",
-      description: (
-         <>
-            Keep better track of your expenses with this handy tool. <br />
-            It lets you create as many different expense lists as you need,
-            making it simple to manage and organize your financial records.
-            <br />
-         </>
-      ),
-      technologies: [
-         "html-5",
-         "css-3",
-         "bootstrap",
-         "javascript",
-         "typescript",
-      ],
-   },
+
    {
       title: "Trivia",
       linkAddress: "Trivia",

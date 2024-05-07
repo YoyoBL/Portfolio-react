@@ -3,6 +3,16 @@ import "../styles/general.css";
 import Technologies from "./technologies";
 
 const ProjectPage = ({ project }) => {
+   const liveProduction = project.linkAddress.startsWith("https://")
+      ? project.linkAddress
+      : `https://yoyobl.github.io/${project.linkAddress}`;
+   const githubLink = project.githubRepository
+      ? `https://github.com/YoyoBL/${project.githubRepository}`
+      : `https://github.com/YoyoBL/${project.linkAddress}`;
+   const downloadLink = project.githubRepository
+      ? `https://github.com/YoyoBL/${project.githubRepository}/archive/refs/heads/master.zip`
+      : `https://github.com/YoyoBL/${project.linkAddress}/archive/refs/heads/master.zip`;
+   console.log(githubLink);
    return (
       <div
          className="d-flex flex-column overflow-hidden"
@@ -26,20 +36,17 @@ const ProjectPage = ({ project }) => {
                <p>{project.details}</p>
                <div className="d-flex flex-nowrap justify-content-center align-items-stretch gap-2">
                   <Link
-                     to={`https://yoyobl.github.io/${project.linkAddress}`}
+                     to={liveProduction}
                      className="btn btn-outline-light "
                      target="_blank"
                   >
                      Visit project
                   </Link>
-                  <Link
-                     to={`https://github.com/YoyoBL/${project.linkAddress}/archive/refs/heads/master.zip`}
-                     className="btn btn-outline-light "
-                  >
+                  <Link to={downloadLink} className="btn btn-outline-light ">
                      Download project
                   </Link>
                   <Link
-                     to={`https://github.com/YoyoBL/${project.linkAddress}`}
+                     to={githubLink}
                      className="btn btn-outline-light"
                      target="_blank"
                   >
@@ -52,8 +59,8 @@ const ProjectPage = ({ project }) => {
                style={{ paddingBlock: "20px" }}
             >
                <Technologies
-                  height={"30px"}
-                  carousel={false}
+                  height={"60px"}
+                  carousel={true}
                   technologies={project.technologies}
                />
             </div>

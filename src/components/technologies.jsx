@@ -11,6 +11,8 @@ const Technologies = ({
       "javascript",
       "typescript",
       "react",
+      "nextjs",
+      "tailwind",
       "axios",
       "nodejs",
       "mongoose",
@@ -32,7 +34,7 @@ const Technologies = ({
       return (
          <div key={key} className={carousel && "slide"}>
             {technologies.map((logo, index) => (
-               <div className="logos-slide">
+               <div key={logo} className="logos-slide">
                   <div className="mx-3 flex">
                      <img
                         className="mx-auto"
