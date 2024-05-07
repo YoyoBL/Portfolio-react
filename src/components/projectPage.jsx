@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/general.css";
 import Technologies from "./technologies";
 
 const ProjectPage = ({ project }) => {
+   const navigate = useNavigate();
+
+   const handleGoBack = () => {
+      navigate(-1);
+   };
+
    const liveProduction = project.linkAddress.startsWith("https://")
       ? project.linkAddress
       : `https://yoyobl.github.io/${project.linkAddress}`;
@@ -12,7 +18,6 @@ const ProjectPage = ({ project }) => {
    const downloadLink = project.githubRepository
       ? `https://github.com/YoyoBL/${project.githubRepository}/archive/refs/heads/master.zip`
       : `https://github.com/YoyoBL/${project.linkAddress}/archive/refs/heads/master.zip`;
-   console.log(githubLink);
    return (
       <div
          className="d-flex flex-column overflow-hidden"
@@ -24,9 +29,26 @@ const ProjectPage = ({ project }) => {
                data-bs-theme="dark"
             >
                <div className="container">
-                  <Link to="/" className="navbar-brand">
-                     #Yoel Bar-Lev | Full-stack developer
-                  </Link>
+                  <div
+                     onClick={handleGoBack}
+                     className="text-white d-flex align-items-center gap-2 fs-5"
+                     style={{ cursor: "pointer" }}
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        class="bi bi-chevron-left"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           fill-rule="evenodd"
+                           d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                        />
+                     </svg>
+                     <span>Back</span>
+                  </div>
                </div>
             </nav>
          </header>
@@ -59,8 +81,8 @@ const ProjectPage = ({ project }) => {
                style={{ paddingBlock: "20px" }}
             >
                <Technologies
-                  height={"60px"}
-                  carousel={true}
+                  height={"30px"}
+                  carousel={false}
                   technologies={project.technologies}
                />
             </div>
