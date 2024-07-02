@@ -1,11 +1,11 @@
 export const projectsList = [
    {
       title: "Atsmai",
-      linkAddress: "https://atsmai.onrender.com/en/welcome",
+      linkAddress: "https://atsmai.vercel.app/welcome",
       githubRepository: "Atsmai",
       description: (
          <>
-            Crafted with the new NextJS 14 framework, Manage you're incomes and
+            Crafted with the new NextJS 14 framework, Manage your incomes and
             expenses!
          </>
       ),
@@ -28,6 +28,38 @@ export const projectsList = [
          "tailwind",
          "html-5",
          "css-3",
+         "javascript",
+         "react",
+         "formik",
+         "github",
+      ],
+      featured: true,
+   },
+   {
+      title: "Dresses studio",
+      linkAddress: "https://tehila-barlev.vercel.app/",
+      githubRepository: "tehila_barlev",
+      description: (
+         <>
+            A dresses studio built with Next.js, Tailwind CSS, MongoDB with
+            Prisma ORM and Uploadcare for uploading and managing the images.
+         </>
+      ),
+      details: (
+         <>
+            A dresses studio built with Next.js, Tailwind CSS, MongoDB with
+            Prisma ORM and Uploadcare for uploading and managing the images.
+            <br />
+            The design is clean, modern, and easy to navigate, mainly intended
+            for mobiles. Admin can create, edit, and delete dresses, as well as
+            add images and descriptions.
+         </>
+      ),
+      technologies: [
+         "nextjs",
+         "mongodb",
+         "prisma",
+         "tailwind",
          "javascript",
          "react",
          "formik",

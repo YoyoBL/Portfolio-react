@@ -64,15 +64,15 @@ const ProjectPage = ({ project }) => {
                   >
                      Visit project
                   </Link>
-                  <Link to={downloadLink} className="btn btn-outline-light ">
-                     Download project
-                  </Link>
                   <Link
                      to={githubLink}
                      className="btn btn-outline-light"
                      target="_blank"
                   >
                      Github
+                  </Link>
+                  <Link to={downloadLink} className="btn btn-outline-light ">
+                     Download project
                   </Link>
                </div>
             </div>
